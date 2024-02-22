@@ -24,7 +24,7 @@ void setup()
    bool leadingZeros = true;            //true muestra ceros a izquierda
   
    sevseg.begin(hardwareConfig, numDigits, digitPins, segmentPins, resistorsOnSegments, updateWithDelays, leadingZeros);
-   sevseg.setBrightness(60);            //Establece brillo a 90%
+   sevseg.setBrightness(60);            //Establece brillo
 }
 
 
@@ -51,7 +51,8 @@ if ( tiempo1 != tiempo2 ) {
 }
  
 void contador(){
-
+//las rutinas reinician los contadores para evitar que se muestren valores fuera de la escala de tiempo
+   
 //rutina segundos 
 if ( segundo == 61 ) {
 segundo =0;
